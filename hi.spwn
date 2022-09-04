@@ -1,0 +1,2 @@
+chair = 1g
+chair.move(70, 20, 1)

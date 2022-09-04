@@ -1,0 +1,16 @@
+state = counter(false)
+clicks = counter(1)
+counter_display = 999g
+
+on(touch(), !{
+  state += 1
+})
+
+on(touch_end(), !{
+  state -= 1
+  clicks += 1
+})
+
+clicks.to_obj().add()
+counter_display.move(0, 10, 0)
+counter_display.move(10000, 0, 1000)
